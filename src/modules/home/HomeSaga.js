@@ -1,15 +1,20 @@
-import { call, put, take } from 'redux-saga/effects'
+import { call, put, take, fork } from 'redux-saga/effects'
 import { testAction } from './HomeAction'
 
 function helloSaga() {
   return {data: 'hello Saga!'}
 }
 
-export function* callAPI() {
+function* callAPI() {
   while(true) {
     yield take('TEST');
     const { data } = yield call(helloSaga);
     yield put(testAction(data));
     
   }
+}
+
+
+export default function* HomeSaga() {
+  yield fork(callAPI)
 }

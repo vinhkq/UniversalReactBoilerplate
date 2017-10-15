@@ -6,11 +6,11 @@ export default class Home extends Component {
   }
 
   testAction = e => {
-    this.props.testContainer()
+    this.props.dispatch({type: 'TEST', data: 'ahihi'})
   }
 
   render() {
-    const { test, testContainer } = this.props;
+    const { test } = this.props;
     return (
       <div>
         <h1>{test}</h1>

@@ -4,11 +4,10 @@ import Home from '../components/home'
 import { testAction } from '../HomeAction'
 
 const mapDispatchToProps = dispatch => ({
-  testContainer: (data) => {
-    // dispatch(testAction(data))     pass data from component
-    dispatch(testAction())     // pass data from saga
-  },
-
+  // testContainer: (data) => {
+  //   dispatch(testAction(data))
+  // },
+  dispatch
 })
 
 const mapStateToProps = state => {
