@@ -4,10 +4,9 @@ import Home from '../components/home'
 import { testAction } from '../HomeAction'
 
 const mapDispatchToProps = dispatch => ({
-  // testContainer: (data) => {
-  //   dispatch(testAction(data))
-  // },
-  dispatch
+  testContainer: (data) => {
+    dispatch(testAction(data))
+  },
 })
 
 const mapStateToProps = state => {

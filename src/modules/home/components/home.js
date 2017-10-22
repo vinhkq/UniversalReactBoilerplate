@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Link from 'next/link'
 
 export default class Home extends Component {
   constructor (props) {
@@ -6,7 +7,7 @@ export default class Home extends Component {
   }
 
   testAction = e => {
-    this.props.dispatch({type: 'TEST', data: 'ahihi'})
+    this.props.testContainer('ahihi');
   }
 
   render() {
@@ -18,6 +19,9 @@ export default class Home extends Component {
           type='checkbox'
           onClick={this.testAction}
          />
+        <Link href={{ pathname: '/about', query: { name: 'test' } }}>
+          <a>About Here!</a>
+        </Link>
       </div>
     )
   }

@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
-import Home from '../src/modules/home/containers/home'
 import reducer from '../src/common/rootReducer'
 import saga from '../src/common/rootSaga'
 import defaultPage from '../src/common/defaultPage'
+import About from '../src/modules/about/components/about'
 
 class Page extends Component {
+  constructor (props) {
+    super(props)
+  }
 
   render() {
     return (
       <div>
-        <Home />
+        <About />
       </div>
     )
   }
