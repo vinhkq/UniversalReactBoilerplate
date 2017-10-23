@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import configureStore from './store'
 import mainStyle from '../common/styles/style.css'
+// import mainStyle from '../common/styles/style.sass'
+// import mainStyle from '../common/styles/style.less'
 
 const mainPage = (Page) => class DefaultPage extends Component {
   static getInitialProps() {
