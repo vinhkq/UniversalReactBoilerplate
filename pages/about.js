@@ -1,13 +1,8 @@
 import React, { Component } from 'react'
-import reducer from '../src/common/rootReducer'
-import saga from '../src/common/rootSaga'
-import defaultPage from '../src/common/defaultPage'
 import About from '../src/modules/about/components/about'
+import configureStore from '../src/common/store'
 
 class Page extends Component {
-  constructor (props) {
-    super(props)
-  }
 
   render() {
     return (
@@ -18,7 +13,4 @@ class Page extends Component {
   }
 }
 
-export default defaultPage({
-  Page, 
-  reducer: { reducer }
-})
+export default configureStore(Page)
