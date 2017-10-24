@@ -7,13 +7,14 @@ import nextReduxSaga from 'next-redux-saga'
 import createSagaMiddleware from 'redux-saga'
 import reducer from '../common/rootReducer'
 import saga from '../common/rootSaga'
+import Layout from '../common/layout/Layout'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const initStore = (reducer, initialState) => {
+const initStore = (initialState = {}) => {
   const buildStore = () => {
     const store = createStore(
-      combineReducers({...reducer}),
+      combineReducers({ reducer }),
       initialState,
       composeWithDevTools(applyMiddleware(sagaMiddleware))
     )
@@ -23,11 +24,8 @@ const initStore = (reducer, initialState) => {
   return buildStore
 }
 
-const configureStore = ({ Page, reducer }) => (
-  withRedux(
-    initStore(reducer),
-    null
-  )(Page)
+const configureStore = (Page) => (
+  withRedux(initStore())(Layout(Page))
 )
 
 export default configureStore
