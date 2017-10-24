@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Link from 'next/link'
 import style from '../home.css'
+import avatar from '../static/logo.png'
 
 export default class Home extends Component {
   constructor (props) {
@@ -15,7 +16,8 @@ export default class Home extends Component {
     const { test } = this.props;
     return (
       <div>
-        <style jsx>{style}</style>
+        <style jsx global>{style}</style>
+        <img src={avatar} />
         <h1>{test}</h1>
         <input
           type='checkbox'

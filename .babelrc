@@ -3,8 +3,24 @@
     "next/babel"
   ],
   "plugins": [
-    ["wrap-in-js", {
+    [
+      "wrap-in-js",
+      {
       "extensions": ["css$", "scss$", "less$"]
-    }]
+      }
+    ],
+    [
+      "transform-assets-import-to-string",
+      {
+        "baseDir": "static",
+        "baseUri": "/"
+      }
+    ],
+    [
+      "inline-import",
+      {
+        "extensions": [".css", "scss", "less"]
+      }
+    ]
   ]
 }
