@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
-import mainStyle from '../../common/styles/style.css'
-// import mainStyle from '../common/styles/style.sass'
-// import mainStyle from '../common/styles/style.less'
+// import mainStyle from '../styles/style.css'
+import mainStyle from '../styles/style.scss'
+// import mainStyle from '../styles/style.less'
 
 const Layout = (Page) => class Layout extends Component {
 

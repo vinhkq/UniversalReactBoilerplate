@@ -15,12 +15,6 @@
         "baseDir": "static",
         "baseUri": "/"
       }
-    ],
-    [
-      "inline-import",
-      {
-        "extensions": [".css", "scss", "less"]
-      }
     ]
   ]
 }

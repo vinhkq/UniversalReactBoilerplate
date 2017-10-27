@@ -15,7 +15,7 @@ export default class Home extends Component {
     const { test } = this.props;
     return (
       <div>
-        <style jsx global>{style}</style>
+        <style jsx>{style}</style>
         <h1>{test}</h1>
         <input
           type='checkbox'
