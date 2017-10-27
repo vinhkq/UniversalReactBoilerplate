@@ -20,7 +20,6 @@ const Layout = (Page) => class Layout extends Component {
           <meta name="description" content="" />
           <link rel="shortcut icon" href="/static/favicon.png" />
           <title>Universal React Boilerplate</title>
-          <link rel="stylesheet" href="/static/css/bulma.css" />
           <style dangerouslySetInnerHTML={{ __html: mainStyle }} />
         </Head>
         <Header />
