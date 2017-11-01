@@ -10,7 +10,7 @@ function* callAPI() {
     yield take('TEST');
     const { data } = yield call(helloSaga);
     yield put(testAction(data));
-    
+
   }
 }
 
