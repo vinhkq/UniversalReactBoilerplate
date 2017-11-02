@@ -9,7 +9,6 @@ const defaultState = {
 
 const handlers = {
   [testAction]: (state, action) => {
-    console.log(action);
     return ({...state,
       ...{ test: action.payload }
     });

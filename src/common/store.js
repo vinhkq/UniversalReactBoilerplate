@@ -1,9 +1,6 @@
-
-import React, { Component } from 'react'
 import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import withRedux from 'next-redux-wrapper'
-import nextReduxSaga from 'next-redux-saga'
 import createSagaMiddleware from 'redux-saga'
 import reducer from '../common/rootReducer'
 import saga from '../common/rootSaga'
