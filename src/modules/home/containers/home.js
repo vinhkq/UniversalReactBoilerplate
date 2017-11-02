@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import Home from '../components/home'
 import { testAction } from '../HomeAction'
 

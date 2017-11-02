@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
 import Home from '../src/modules/home/containers/home'
 import configureStore from '../src/common/store'
 
